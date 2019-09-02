@@ -4,7 +4,7 @@
  */
 
 import { Observable, Observer, Subscription, interval, of, Subject, BehaviorSubject, from } from 'rxjs';
-import { map, catchError, take } from 'rxjs/operators';
+import { map, catchError, take, bufferTime } from 'rxjs/operators';
 
 // const helloObservable : Observable<string> = new 
 //     Observable((observer : Observer<string>) => {
