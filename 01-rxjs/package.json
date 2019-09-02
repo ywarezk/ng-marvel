@@ -1,0 +1,18 @@
+{
+  "name": "01-rxjs",
+  "version": "1.0.0",
+  "description": "Expend your tools for dealing with async code.  In this lesson we will cover Promise and Observable and learn how to deal with advanced use cases of async code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.6.2"
+  },
+  "dependencies": {
+    "rxjs": "^6.5.2"
+  }
+}
