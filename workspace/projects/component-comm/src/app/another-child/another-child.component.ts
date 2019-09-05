@@ -4,7 +4,6 @@ import {
   Component, OnInit, ViewEncapsulation, Input, OnChanges, SimpleChanges, DoCheck, OnDestroy } from '@angular/core';
 import { HelloService } from '../hello.service';
 import { Subscription } from 'rxjs';
-import { ContentChild } from '@angular/core';
 import { ChildComponent } from '../child/child.component';
 
 @Component({
@@ -39,7 +38,7 @@ export class AnotherChildComponent implements OnInit, OnChanges, DoCheck, OnDest
   // @Input() set stam() {
 
   // }
-  
+
   @Output() hello : EventEmitter<string> = new EventEmitter();
 
   constructor(private _hello : HelloService) { }
