@@ -1,3 +1,26 @@
-<app-another-child [msg]="msgObject"></app-another-child>
+<app-another-child 
+    #anotherChild="anotherChildHello"
+    [msg]="msgObject" 
+    (hello)="alertHello($event)">
+
+    <div>
+        <h1>
+            hello from parent
+        </h1>
+        <p>
+            {{title}}
+        </p>
+        <app-child></app-child>
+    </div>
+
+</app-another-child>
 
 <app-child></app-child>
+
+<h1 #h1Instance>
+    {{anotherChild.sayHello()}}
+</h1>
+
+<form #myForm="ngForm">
+
+</form>

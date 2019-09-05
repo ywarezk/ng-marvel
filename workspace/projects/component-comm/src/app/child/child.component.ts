@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HelloService } from '../hello.service';
 
 @Component({
   selector: 'app-child',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChildComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _hello : HelloService) { }
 
   ngOnInit() {
+    setTimeout(() => {
+      console.log('passing to another child');
+      this._hello.hello.next('hello from child');
+    }, 2000)
   }
 
 }
