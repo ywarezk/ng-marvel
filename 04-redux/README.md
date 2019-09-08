@@ -2,7 +2,8 @@
 
 ### @angular/cli commands
 
-- ng add @ngrx/store
+- ng g application redux-ex
+- ng add @ngrx/store --project redux-ex
 - ng g @ngrx/schematics:action --help
 - ng g @ngrx/schematics:reducer --help
 
