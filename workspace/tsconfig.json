@@ -19,7 +19,9 @@
       "dom"
     ],
     "paths": {
-      
+      "@nz/hello-israel": [
+        "projects/hello-israel/src/lib.ts"
+      ]
     }
   },
   "angularCompilerOptions": {

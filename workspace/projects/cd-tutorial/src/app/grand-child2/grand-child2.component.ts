@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-grand-child2',
@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
       grand-child2 works! {{sayHello()}}
     </p>
   `,
-  styles: []
+  styles: [],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class GrandChild2Component implements OnInit {
 
