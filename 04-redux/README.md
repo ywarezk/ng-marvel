@@ -1,5 +1,11 @@
 ## Redux
 
+### @angular/cli commands
+
+- ng add @ngrx/store
+- ng g @ngrx/schematics:action --help
+- ng g @ngrx/schematics:reducer --help
+
 ### EX.
 
 - the job is to create todo list with button to delete todo list element
