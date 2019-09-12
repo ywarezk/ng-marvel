@@ -662,6 +662,360 @@
           }
         }
       }
+    },
+    "redux-tutorial2": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/redux-tutorial2",
+      "sourceRoot": "projects/redux-tutorial2/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/redux-tutorial2",
+            "index": "projects/redux-tutorial2/src/index.html",
+            "main": "projects/redux-tutorial2/src/main.ts",
+            "polyfills": "projects/redux-tutorial2/src/polyfills.ts",
+            "tsConfig": "projects/redux-tutorial2/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/redux-tutorial2/src/favicon.ico",
+              "projects/redux-tutorial2/src/assets"
+            ],
+            "styles": [
+              "projects/redux-tutorial2/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/redux-tutorial2/src/environments/environment.ts",
+                  "with": "projects/redux-tutorial2/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "redux-tutorial2:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "redux-tutorial2:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "redux-tutorial2:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/redux-tutorial2/src/test.ts",
+            "polyfills": "projects/redux-tutorial2/src/polyfills.ts",
+            "tsConfig": "projects/redux-tutorial2/tsconfig.spec.json",
+            "karmaConfig": "projects/redux-tutorial2/karma.conf.js",
+            "assets": [
+              "projects/redux-tutorial2/src/favicon.ico",
+              "projects/redux-tutorial2/src/assets"
+            ],
+            "styles": [
+              "projects/redux-tutorial2/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/redux-tutorial2/tsconfig.app.json",
+              "projects/redux-tutorial2/tsconfig.spec.json",
+              "projects/redux-tutorial2/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/redux-tutorial2/e2e/protractor.conf.js",
+            "devServerTarget": "redux-tutorial2:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "redux-tutorial2:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "di-tutorial": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/di-tutorial",
+      "sourceRoot": "projects/di-tutorial/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/di-tutorial",
+            "index": "projects/di-tutorial/src/index.html",
+            "main": "projects/di-tutorial/src/main.ts",
+            "polyfills": "projects/di-tutorial/src/polyfills.ts",
+            "tsConfig": "projects/di-tutorial/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/di-tutorial/src/favicon.ico",
+              "projects/di-tutorial/src/assets"
+            ],
+            "styles": [
+              "projects/di-tutorial/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/di-tutorial/src/environments/environment.ts",
+                  "with": "projects/di-tutorial/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "di-tutorial:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "di-tutorial:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "di-tutorial:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/di-tutorial/src/test.ts",
+            "polyfills": "projects/di-tutorial/src/polyfills.ts",
+            "tsConfig": "projects/di-tutorial/tsconfig.spec.json",
+            "karmaConfig": "projects/di-tutorial/karma.conf.js",
+            "assets": [
+              "projects/di-tutorial/src/favicon.ico",
+              "projects/di-tutorial/src/assets"
+            ],
+            "styles": [
+              "projects/di-tutorial/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/di-tutorial/tsconfig.app.json",
+              "projects/di-tutorial/tsconfig.spec.json",
+              "projects/di-tutorial/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/di-tutorial/e2e/protractor.conf.js",
+            "devServerTarget": "di-tutorial:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "di-tutorial:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "forms-tutorial": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/forms-tutorial",
+      "sourceRoot": "projects/forms-tutorial/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/forms-tutorial",
+            "index": "projects/forms-tutorial/src/index.html",
+            "main": "projects/forms-tutorial/src/main.ts",
+            "polyfills": "projects/forms-tutorial/src/polyfills.ts",
+            "tsConfig": "projects/forms-tutorial/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/forms-tutorial/src/favicon.ico",
+              "projects/forms-tutorial/src/assets"
+            ],
+            "styles": [
+              "projects/forms-tutorial/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/forms-tutorial/src/environments/environment.ts",
+                  "with": "projects/forms-tutorial/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "forms-tutorial:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "forms-tutorial:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "forms-tutorial:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/forms-tutorial/src/test.ts",
+            "polyfills": "projects/forms-tutorial/src/polyfills.ts",
+            "tsConfig": "projects/forms-tutorial/tsconfig.spec.json",
+            "karmaConfig": "projects/forms-tutorial/karma.conf.js",
+            "assets": [
+              "projects/forms-tutorial/src/favicon.ico",
+              "projects/forms-tutorial/src/assets"
+            ],
+            "styles": [
+              "projects/forms-tutorial/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/forms-tutorial/tsconfig.app.json",
+              "projects/forms-tutorial/tsconfig.spec.json",
+              "projects/forms-tutorial/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/forms-tutorial/e2e/protractor.conf.js",
+            "devServerTarget": "forms-tutorial:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "forms-tutorial:serve:production"
+            }
+          }
+        }
+      }
     }},
   "defaultProject": "workspace"
 }

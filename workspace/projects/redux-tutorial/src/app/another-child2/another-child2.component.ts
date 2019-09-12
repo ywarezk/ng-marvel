@@ -13,6 +13,7 @@ import { map } from 'rxjs/operators';
     <p>
       {{message$ | async}}
     </p>
+    // <li *ngFor="let item of (users | async)"></li>
 
   `,
   styles: [],
