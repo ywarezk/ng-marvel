@@ -1,5 +1,12 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { Component, NO_ERRORS_SCHEMA } from '@angular/core';
+
+@Component({
+  selector: 'app-login-reactive',
+  template: ``
+})
+export class MockAppLoginReactive{}
 
 describe('AppComponent', () => {
   
@@ -7,8 +14,9 @@ describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent, MockAppLoginReactive
       ],
+      schemas: [NO_ERRORS_SCHEMA],
     }).compileComponents();
   }));
 
